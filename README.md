@@ -17,6 +17,7 @@ The platform caters to two main user groups:
 1.**Customers:** Allows users to explore a catalog of products, add items to their cart, and place orders with ease.
 
 2.**Administrators:** Empowers business owners with tools to manage their product inventory and track customer orders.
+
 **Key Features**
 
 1.**User Authentication**
