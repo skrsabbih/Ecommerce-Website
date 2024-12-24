@@ -18,6 +18,7 @@ The platform caters to two main user groups:
 
 2.**Administrators:** Empowers business owners with tools to manage their product inventory and track customer orders.
 **Key Features**
+
 1.**User Authentication**
 
 -Secure login and registration for customers and admins using PHP password hashing.
