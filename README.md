@@ -9,7 +9,14 @@
 - nahidulhasan
 
 ## Project Description
-Add your project description here.
+The Online Shopping Cart System is a web-based platform designed to deliver a seamless and secure online shopping experience for users. This project aims to bridge the gap between customers and businesses by providing a robust platform for product browsing, order placement, and efficient management.
+
+Purpose
+The platform caters to two main user groups:
+
+1.Customers: Allows users to explore a catalog of products, add items to their cart, and place orders with ease.
+
+2.Administrators: Empowers business owners with tools to manage their product inventory and track customer orders.
 
 ## Getting Started
 1. Clone the repository
