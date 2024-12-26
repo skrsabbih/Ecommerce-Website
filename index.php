@@ -71,7 +71,7 @@ $product->create();
 $product->update("Gaming Laptop", 1500);
 $product->delete();
 
-$coupon = new Coupon("NEWYEAR2024", 20);
+$coupon = new Coupon("NEWYEAR2025", 20);
 $coupon->create();
 $coupon->update("WINTER2024", 25);
 $coupon->delete();
