@@ -6,9 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-
-    <h1>This is a Admin Dashboard</h1>
-
-   
+    <h1>This is a Vendor Dashboard</h1>
 </body>
-</html>
+</html><?php /**PATH D:\e-commerce\resources\views/vendor/dashboard.blade.php ENDPATH**/ ?>
