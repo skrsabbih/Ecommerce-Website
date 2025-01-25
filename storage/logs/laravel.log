@@ -2800,3 +2800,11 @@
 #25 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle()
 #26 {main}
 "} 
+[2025-01-25 18:43:08] local.ERROR: Out of memory (allocated 10485760 bytes) (tried to allocate 4096 bytes) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Out of memory (allocated 10485760 bytes) (tried to allocate 4096 bytes) at D:\\e-commerce\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php:1332)
+[stacktrace]
+#0 {main}
+"} 
+[2025-01-25 18:43:08] local.ERROR: Out of memory (allocated 12582912 bytes) (tried to allocate 32768 bytes) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Out of memory (allocated 12582912 bytes) (tried to allocate 32768 bytes) at D:\\e-commerce\\vendor\\symfony\\console\\Application.php:654)
+[stacktrace]
+#0 {main}
+"} 
