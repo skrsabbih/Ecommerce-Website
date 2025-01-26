@@ -2808,3 +2808,7 @@
 [stacktrace]
 #0 {main}
 "} 
+[2025-01-26 19:09:01] local.ERROR: Out of memory (allocated 18874368 bytes) (tried to allocate 32768 bytes) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Out of memory (allocated 18874368 bytes) (tried to allocate 32768 bytes) at D:\\e-commerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\ModelMakeCommand.php:1)
+[stacktrace]
+#0 {main}
+"} 
