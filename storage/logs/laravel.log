@@ -3847,3 +3847,7 @@ Did you mean one of these?
 #3 D:\\e-commerce\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle()
 #4 {main}
 "} 
+[2025-01-31 09:00:36] local.ERROR: Cannot use App\Http\Controllers\ProfileController as ProfileController because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot use App\\Http\\Controllers\\ProfileController as ProfileController because the name is already in use at D:\\e-commerce\\routes\\web.php:5)
+[stacktrace]
+#0 {main}
+"} 
