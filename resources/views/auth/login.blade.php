@@ -84,32 +84,31 @@
                             <div class="tab-pane fade" id="pills-profiles" role="tabpanel"
                                 aria-labelledby="pills-profile-tab2">
                                 <div class="wsus__login">
-                                    <form>
+                                    <form method="POST" action="{{ route('register') }}">
+                                        @csrf
                                         <div class="wsus__login_input">
                                             <i class="fas fa-user-tie"></i>
-                                            <input type="text" placeholder="Name">
+                                            <input id="name" name="name" value="{{old('name')}}" type="text" placeholder="Name">
                                         </div>
+        
+  
                                         <div class="wsus__login_input">
                                             <i class="far fa-envelope"></i>
-                                            <input type="text" placeholder="Email">
+                                            <input id="email" name="email" type="text" value="{{old('email')}}" placeholder="Email">
                                         </div>
+                    
+
                                         <div class="wsus__login_input">
                                             <i class="fas fa-key"></i>
-                                            <input type="text" placeholder="Password">
+                                            <input  id="password" name="password"  type="password" placeholder="Password">
                                         </div>
+                
                                         <div class="wsus__login_input">
                                             <i class="fas fa-key"></i>
-                                            <input type="text" placeholder="Confirm Password">
+                                            <input id="password_confirmation" name="password_confirmation" type="password" placeholder="Confirm Password">
                                         </div>
-                                        <div class="wsus__login_save">
-                                            <div class="form-check form-switch">
-                                                <input class="form-check-input" type="checkbox"
-                                                    id="flexSwitchCheckDefault03">
-                                                <label class="form-check-label" for="flexSwitchCheckDefault03">I consent
-                                                    to the privacy policy</label>
-                                            </div>
-                                        </div>
-                                        <button class="common_btn" type="submit">signup</button>
+        
+                                        <button class="common_btn mt-4" type="submit">signup</button>
                                     </form>
                                 </div>
                             </div>
