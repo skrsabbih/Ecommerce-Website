@@ -47,27 +47,33 @@
                  </form>
                    
                     <div class="wsus__dash_pass_change mt-2">
+                    <form action="{{route('user.profile.update.password')}}" method="POST">
+                      @csrf
                       <div class="row">
+                        <h4>Update Password</h4>
                         <div class="col-xl-4 col-md-6">
                           <div class="wsus__dash_pro_single">
                             <i class="fas fa-unlock-alt"></i>
-                            <input type="password" placeholder="Current Password">
+                            <input type="password" placeholder="Current Password" name="current_password">
                           </div>
                         </div>
                         <div class="col-xl-4 col-md-6">
                           <div class="wsus__dash_pro_single">
                             <i class="fas fa-lock-alt"></i>
-                            <input type="password" placeholder="New Password">
+                            <input type="password" placeholder="New Password" name="password">
                           </div>
                         </div>
                         <div class="col-xl-4">
                           <div class="wsus__dash_pro_single">
                             <i class="fas fa-lock-alt"></i>
-                            <input type="password" placeholder="Confirm Password">
+                            <input type="password" placeholder="Confirm Password" name="password_confirmation">
                           </div>
                         </div>
-                        
+                        <div class="col-xl-12">
+                            <button class="common_btn" type="submit">Update</button>
+                          </div>
                       </div>
+                    </form>
                     </div>
                   
                
