@@ -35,5 +35,6 @@ Route::group([
     'as' => 'user.'
 ], function () {
     Route::get('dashboard', [UserDashboardController::class, 'index'])->name('dashboard');
-    Route::get('profile', [UserProfileController::class, 'index'])->name('profile');
+    Route::get('profile', [UserProfileController::class, 'index'])->name('profile');//user.profile
+    Route::put('profile', [UserProfileController::class, 'updateProfile'])->name('profile.update');//user.profile.update
 });
