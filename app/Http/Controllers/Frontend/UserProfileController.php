@@ -9,7 +9,7 @@ use File;
 class UserProfileController extends Controller
 {
     public function index(){
-        return view('frontend.profile');
+        return view('frontend.dashboard.profile');
     } 
     public function updateProfile(Request $request){
         $request->validate([
