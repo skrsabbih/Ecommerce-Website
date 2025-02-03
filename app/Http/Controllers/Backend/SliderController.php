@@ -48,6 +48,7 @@ class SliderController extends Controller
         $slider->save();
         
         toastr('Created Successfully','success');
+        
         return redirect()->back();
     }
 
