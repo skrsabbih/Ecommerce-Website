@@ -27,7 +27,7 @@ class vendorProfileController extends Controller
             }
             $image = $request->image;
             $imageName = rand().'_'.$image->getClientOriginalName();
-            $image->move(public_path('upload'), $imageName);
+            $image->move(public_path('uploads'), $imageName);
 
             $path = "/upload/".$imageName;
 
