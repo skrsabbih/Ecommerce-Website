@@ -18,36 +18,37 @@
                 
               </div>
               <div class="card-body">
-               <form action="">
+               <form action="{{route('admin.slider.store')}}" method="POST" enctype="multipart/form-data">
+                @csrf
                 <div class="form-group">
                     <label>Banner</label>
-                    <input type="file" class="form-control">
+                    <input type="file" class="form-control" name="banner">
                   </div>
                 <div class="form-group">
                     <label>Type</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control"name="type" value="{{old('type')}}">
                   </div>
                   <div class="form-group">
                     <label>Title</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control"name="title" value="{{old('title')}}">
                   </div>
                   <div class="form-group">
                     <label>Starting Price</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control"name="starting_price" value="{{old('starting_price')}}">
                   </div>
                   <div class="form-group">
                     <label>Button Url</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="btn_url"value="{{old('btn_url')}}">
                   </div>
                   <div class="form-group">
                     <label>Serial</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="serial"value="{{old('serial')}}">
                   </div>
                   <div class="form-group">
                     <label for="inputState">Status</label>
-                    <select id="inputState" class="form-control">
-                      <option selected="">Active</option>
-                      <option>Inactive</option>
+                    <select id="inputState" class="form-control" name="status">
+                      <option value="1">Active</option>
+                      <option value="0">Inactive</option>
                     </select>
                   </div>
                   <button type="submit" class="btn btn-primary">Create</button>
