@@ -33,7 +33,7 @@ class ProfileController extends Controller
             }
             $image = $request->image;
             $imageName = rand().'_'.$image->getClientOriginalName();
-            $image->move(public_path('uploads'), $imageName);
+            $image->move(public_path('upload'), $imageName);
 
             $path = "/upload/".$imageName;
 
