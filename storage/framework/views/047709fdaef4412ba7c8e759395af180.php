@@ -14,12 +14,18 @@
     <link rel="stylesheet" href="<?php echo e(asset('backend/assets/modules/jqvmap/dist/jqvmap.min.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('backend/assets/modules/weather-icon/css/weather-icons.min.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('backend/assets/modules/weather-icon/css/weather-icons-wind.min.css')); ?>">
-    <link rel="stylesheet" href="<?php echo e(asset('backend/assets/modules/summernote/summernote-bs4.css')); ?>}">
+    <link rel="stylesheet" href="<?php echo e(asset('backend/assets/modules/summernote/summernote-bs4.css')); ?>">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-    <link rel="stylesheet" href="<?php echo e(asset('backend/assets/css/bootstrap-iconpicker.min.css')); ?>}">
+    <link rel="stylesheet" href="<?php echo e(asset('backend/assets/css/bootstrap-iconpicker.min.css')); ?>">
+
+    <!-- Added DataTables CSS -->
+    <link rel="stylesheet" href="//cdn.datatables.net/2.2.1/css/dataTables.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.2.1/css/dataTables.bootstrap5.css">
+
     <!-- Template CSS -->
     <link rel="stylesheet" href="<?php echo e(asset('backend/assets/css/style.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('backend/assets/css/components.css')); ?>">
+
     <!-- Start GA -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-94034622-3"></script>
     <script>
@@ -52,7 +58,6 @@
                         Nauval Azhar</a>
                 </div>
                 <div class="footer-right">
-
                 </div>
             </footer>
         </div>
@@ -75,21 +80,30 @@
     <script src="<?php echo e(asset('backend/assets/modules/summernote/summernote-bs4.js')); ?>"></script>
     <script src="<?php echo e(asset('backend/assets/modules/chocolat/dist/js/jquery.chocolat.min.js')); ?>"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <!-- DataTables JS -->
+    <script src="//cdn.datatables.net/2.2.1/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.2.1/js/dataTables.bootstrap5.js"></script>
+
     <script src="<?php echo e(asset('backend/assets/js/bootstrap-iconpicker.bundle.min.js')); ?>"></script>
+    
     <!-- Page Specific JS File -->
     <script src="<?php echo e(asset('backend/assets/js/page/index-0.js')); ?>"></script>
 
     <!-- Template JS File -->
     <script src="<?php echo e(asset('backend/assets/js/scripts.js')); ?>"></script>
     <script src="<?php echo e(asset('backend/assets/js/custom.js')); ?>"></script>
+
     <script>
         <?php if($errors->any()): ?>
             <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-               toastr.error("<?php echo e($error); ?>")
+                toastr.error("<?php echo e($error); ?>")
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         <?php endif; ?>
     </script>
 
+    <?php echo $__env->yieldPushContent('scripts'); ?>
 </body>
 
-</html><?php /**PATH D:\project\ecommerce\resources\views/admin/layouts/master.blade.php ENDPATH**/ ?>
+</html>
+<?php /**PATH D:\project\ecommerce\resources\views/admin/layouts/master.blade.php ENDPATH**/ ?>

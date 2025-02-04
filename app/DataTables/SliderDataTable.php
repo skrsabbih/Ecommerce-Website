@@ -74,11 +74,10 @@ class SliderDataTable extends DataTable
     {
         return [
             
-            Column::make('Action'),
-            Column::make('Id'),
-            Column::make('Add Your Columns'),
-            Column::computed('Created At'),
-            Column::computed('Updated At')
+            Column::make('id'),
+            Column::make('banner'),
+            Column::make('title'),
+            Column::computed('action')
                   ->exportable(false)
                   ->printable(false)
                   ->width(60)

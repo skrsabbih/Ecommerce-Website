@@ -8,11 +8,9 @@ use Illuminate\Http\Request;
 use App\Models\Slider;
 use App\DataTables\SliderDataTable;
 use File;
-
 class SliderController extends Controller
 {
     use ImageUploadTrait;
-
     /**
      * Display a listing of the resource.
      */
@@ -65,11 +63,12 @@ class SliderController extends Controller
     
         // Save the slider to the database
         $slider->save();
-        
+    
+        // Show success message and redirect back
         toastr()->success('Slider created successfully!');
-        
         return redirect()->back();
     }
+    
 
     /**
      * Display the specified resource.
@@ -86,11 +85,13 @@ class SliderController extends Controller
     {
         $slider = Slider::findOrFail($id);
         return view('admin.slider.edit', ['slider' => $slider]);
+
     }
 
     /**
      * Update the specified resource in storage.
      */
+    
     public function update(Request $request, string $id)
     {
         // Validate the request data
@@ -107,9 +108,11 @@ class SliderController extends Controller
         // Find the slider or throw a 404 if not found
         $slider = Slider::findOrFail($id);
     
+            
         // Upload the new image
-        $imagePath = $this->updateImage($request, 'banner', 'uploads', $slider->banner);
+        $imagePath = $this->updateImage($request, 'banner', 'uploads',$slider->banner);
         $slider->banner = $imagePath;
+        
     
         // Update other fields
         $slider->type = $request->type;
@@ -126,6 +129,7 @@ class SliderController extends Controller
         toastr()->success('Slider updated successfully!');
         return redirect()->route('admin.slider.index'); // Redirect to index page (adjust route as needed)
     }
+    
 
     /**
      * Remove the specified resource from storage.
