@@ -6,15 +6,17 @@ use App\Http\Controllers\Controller;
 use App\Traits\ImageUploadTrait;
 use Illuminate\Http\Request;
 use App\Models\Slider;
+use App\DataTables\SliderDataTable;
 class SliderController extends Controller
 {
     use ImageUploadTrait;
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(SliderDataTable $dataTable)
     {
-        return view('admin.slider.index');
+        return $dataTable->render('admin.slider.index');
+        //return view('admin.slider.index');
     }
 
     /**
