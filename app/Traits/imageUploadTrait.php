@@ -41,4 +41,13 @@ trait ImageUploadTrait
         // If no new image is uploaded, return the old image path (if provided)
         return $oldPath;
     }
+    public function deleteImage(string $path)
+    {
+        if (File::exists(public_path($path))) {
+            File::delete(public_path($path));
+            return true; // Successfully deleted
+        }
+
+        return false; // File not found or deletion failed
+    }
 }
