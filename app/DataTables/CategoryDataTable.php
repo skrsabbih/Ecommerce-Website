@@ -22,7 +22,24 @@ class CategoryDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->addColumn('action', 'category.action')
+            ->addColumn('action', function($query){
+                $editBtn = "<a href='".route('admin.category.edit', $query->id)."' class='btn btn-primary'><i class='far fa-edit'></i></a>";
+                $deleteBtn = "<a href='".route('admin.category.destroy', $query->id)."' class='btn btn-danger'><i class='fas fa-trash'></i></a>";
+                
+
+                return "<div style='display: flex; gap: 5px;'>" . $editBtn . $deleteBtn . "</div>";
+            })
+            ->addColumn('icon', function($query){
+                return '<i style="font-size:30px" class="'.$query->icon.'"></i>';
+            })
+            ->addColumn('status', function($query){
+                $button = '<label class="custom-switch mt-2">
+                          <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" checked="">
+                          <span class="custom-switch-indicator"></span>
+                        </label>';
+                return $button;
+            })
+            ->rawColumns(['icon', 'action', 'status'])
             ->setRowId('id');
     }
 
@@ -44,7 +61,7 @@ class CategoryDataTable extends DataTable
                     ->columns($this->getColumns())
                     ->minifiedAjax()
                     //->dom('Bfrtip')
-                    ->orderBy(1)
+                    ->orderBy(0)
                     ->selectStyleSingle()
                     ->buttons([
                         Button::make('excel'),
@@ -62,15 +79,16 @@ class CategoryDataTable extends DataTable
     public function getColumns(): array
     {
         return [
+            
+            Column::make('id')->width(50),
+            Column::make('icon')->width(150),
+            Column::make('name')->width(250),
+            Column::make('status')->width(150),
             Column::computed('action')
                   ->exportable(false)
                   ->printable(false)
-                  ->width(60)
+                  ->width(200)
                   ->addClass('text-center'),
-            Column::make('id'),
-            Column::make('add your columns'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
         ];
     }
 
