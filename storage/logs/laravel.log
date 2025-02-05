@@ -10602,3 +10602,7 @@ Stack trace:
 #66 D:\\e-commerce\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(16): require_once('D:\\\\e-commerce\\\\p...')
 #67 {main}
 "} 
+[2025-02-05 08:46:07] local.ERROR: Out of memory (allocated 12582912 bytes) (tried to allocate 49152 bytes) {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Out of memory (allocated 12582912 bytes) (tried to allocate 49152 bytes) at D:\\e-commerce\\vendor\\composer\\ClassLoader.php:576)
+[stacktrace]
+#0 {main}
+"} 

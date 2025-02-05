@@ -94,7 +94,6 @@
             @endforeach
         @endif
     </script>
-
 <!-- Dynamic Delete Alert -->
 <script>
     $(document).ready(function () {
@@ -149,6 +148,7 @@
                     });
                 }
             });
+            return false; // Prevent default behavior
         });
     });
 </script>
