@@ -1,28 +1,22 @@
 <?php
 
 namespace App\Http\Controllers\Backend;
-
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use File;
-
-class ProfileController extends Controller
+class vendorProfileController extends Controller
 {
-    public function index()
-    {
-        return view('admin.profile.index');
-    }
-
-    public function updateProfile(Request $request)
-    {
+    public function index(){
+        return view('vendor.dashboard.profile');
+    } 
+    public function updateProfile(Request $request){
         $request->validate([
             'name'=>['required', 'max:100'],
             'email'=>['required', 'email', 'unique:users,email,'.Auth::user()->id],
             'image'=>['image', 'max:2048']
         ]);
-
-
+        
         $user = Auth::user();
 
 
@@ -35,11 +29,10 @@ class ProfileController extends Controller
             $imageName = rand().'_'.$image->getClientOriginalName();
             $image->move(public_path('uploads'), $imageName);
 
-            $path = "/uploads/".$imageName;
+            $path = "/upload/".$imageName;
 
             $user->image = $path;
         }
-
         $user->name = $request->name;
         $user->email = $request->email;
         $user->save();
@@ -48,7 +41,6 @@ class ProfileController extends Controller
 
         return redirect()->back();
     }
-
     public function updatePassword(Request $request)
     {
         $request->validate([

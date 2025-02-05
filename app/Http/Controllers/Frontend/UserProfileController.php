@@ -1,28 +1,23 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use File;
-
-class ProfileController extends Controller
+class UserProfileController extends Controller
 {
-    public function index()
-    {
-        return view('admin.profile.index');
-    }
-
-    public function updateProfile(Request $request)
-    {
+    public function index(){
+        return view('frontend.dashboard.profile');
+    } 
+    public function updateProfile(Request $request){
         $request->validate([
             'name'=>['required', 'max:100'],
             'email'=>['required', 'email', 'unique:users,email,'.Auth::user()->id],
             'image'=>['image', 'max:2048']
         ]);
-
-
+        
         $user = Auth::user();
 
 
@@ -33,13 +28,12 @@ class ProfileController extends Controller
             }
             $image = $request->image;
             $imageName = rand().'_'.$image->getClientOriginalName();
-            $image->move(public_path('uploads'), $imageName);
+            $image->move(public_path('upload'), $imageName);
 
-            $path = "/uploads/".$imageName;
+            $path = "/upload/".$imageName;
 
             $user->image = $path;
         }
-
         $user->name = $request->name;
         $user->email = $request->email;
         $user->save();
@@ -48,7 +42,6 @@ class ProfileController extends Controller
 
         return redirect()->back();
     }
-
     public function updatePassword(Request $request)
     {
         $request->validate([
