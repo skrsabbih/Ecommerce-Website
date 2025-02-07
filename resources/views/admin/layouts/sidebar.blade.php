@@ -1,6 +1,7 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <!-- Sidebar Brand -->
+        <!-- Sidebar Brand -->
         <div class="sidebar-brand">
             <a href="index.html">Stisla</a>
         </div>
@@ -9,7 +10,10 @@
         </div>
 
         <!-- Sidebar Menu -->
+
+        <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
+            <!-- Dashboard Section -->
             <!-- Dashboard Section -->
             <li class="menu-header">Dashboard</li>
             <li class="dropdown {{ setActive('admin.dashboard') }}">
@@ -18,6 +22,8 @@
                     <span>Dashboard</span>
                 </a>
             </li>   
+
+            <!-- Manage Categories Section -->
 
             <!-- Manage Categories Section -->
             <li class="menu-header">Starter</li>
@@ -48,6 +54,9 @@
                     <span>Manage Website</span>
                 </a>
                 <ul class="dropdown-menu">
+                    <li class="{{ setActive(['admin.slider.*']) }}">
+                        <a class="nav-link" href="{{ route('admin.slider.index') }}">Slider</a>
+                    </li>
                     <li class="{{ setActive(['admin.slider.*']) }}">
                         <a class="nav-link" href="{{ route('admin.slider.index') }}">Slider</a>
                     </li>
