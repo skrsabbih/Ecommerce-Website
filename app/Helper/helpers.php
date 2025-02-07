@@ -1,5 +1,5 @@
 ?<?php
-<<<<<<< HEAD
+
 /*Set sidebar item active*/if (!function_exists('setActive')) {
     /**
      * Set the 'active' class for the navigation menu based on the current route.
