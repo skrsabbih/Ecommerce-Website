@@ -24,7 +24,7 @@ class CategoryDataTable extends DataTable
         return (new EloquentDataTable($query))
             ->addColumn('action', function($query){
                 $editBtn = "<a href='".route('admin.category.edit', $query->id)."' class='btn btn-primary'><i class='far fa-edit'></i></a>";
-                $deleteBtn = "<a href='".route('admin.category.destroy', $query->id)."' class='btn btn-danger'><i class='fas fa-trash'></i></a>";
+                $deleteBtn = "<a href='".route('admin.category.destroy', $query->id)."' class='btn btn-danger delete-item'><i class='fas fa-trash'></i></a>";
                 
 
                 return "<div style='display: flex; gap: 5px;'>" . $editBtn . $deleteBtn . "</div>";
@@ -33,10 +33,18 @@ class CategoryDataTable extends DataTable
                 return '<i style="font-size:30px" class="'.$query->icon.'"></i>';
             })
             ->addColumn('status', function($query){
-                $button = '<label class="custom-switch mt-2">
-                          <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input" checked="">
+                if($query->status == 1){
+                    $button = '<label class="custom-switch mt-2">
+                          <input type="checkbox" checked name="custom-switch-checkbox" data-id="'.$query->id.'" class="custom-switch-input change-status">
                           <span class="custom-switch-indicator"></span>
                         </label>';
+                }else{
+                    $button = '<label class="custom-switch mt-2">
+                          <input type="checkbox" name="custom-switch-checkbox" data-id="'.$query->id.'" class="custom-switch-input change-status">
+                          <span class="custom-switch-indicator"></span>
+                        </label>';
+                }
+                
                 return $button;
             })
             ->rawColumns(['icon', 'action', 'status'])
