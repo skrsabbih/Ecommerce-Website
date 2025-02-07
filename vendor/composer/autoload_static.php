@@ -40,6 +40,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '320163ac6b93aebe3dc25b60a0533d56' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/helpers.php',
         '101b35f72e0ccb1b5ef72aa86bba3ef9' => __DIR__ . '/..' . '/yoeunes/toastr/src/helpers.php',
+        '4636dc85518df5919ed9898effec2b96' => __DIR__ . '/../..' . '/App/Helper/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -201,11 +202,11 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         ),
         'Yajra\\DataTables\\' => 
         array (
-            0 => __DIR__ . '/..' . '/yajra/laravel-datatables-fractal/src',
+            0 => __DIR__ . '/..' . '/yajra/laravel-datatables-buttons/src',
             1 => __DIR__ . '/..' . '/yajra/laravel-datatables-editor/src',
-            2 => __DIR__ . '/..' . '/yajra/laravel-datatables-buttons/src',
-            3 => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src',
-            4 => __DIR__ . '/..' . '/yajra/laravel-datatables-html/src',
+            2 => __DIR__ . '/..' . '/yajra/laravel-datatables-fractal/src',
+            3 => __DIR__ . '/..' . '/yajra/laravel-datatables-html/src',
+            4 => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src',
         ),
         'Whoops\\' => 
         array (
@@ -571,6 +572,9 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\DataTables\\CategoryDataTable' => __DIR__ . '/../..' . '/app/DataTables/CategoryDataTable.php',
+        'App\\DataTables\\SliderDataTable' => __DIR__ . '/../..' . '/app/DataTables/SliderDataTable.php',
+        'App\\DataTables\\SubCategoryDataTable' => __DIR__ . '/../..' . '/app/DataTables/SubCategoryDataTable.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
@@ -585,6 +589,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Controllers\\Backend\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/CategoryController.php',
         'App\\Http\\Controllers\\Backend\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/ProfileController.php',
         'App\\Http\\Controllers\\Backend\\SliderController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/SliderController.php',
+        'App\\Http\\Controllers\\Backend\\SubCategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/SubCategoryController.php',
         'App\\Http\\Controllers\\Backend\\VendorController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/VendorController.php',
         'App\\Http\\Controllers\\Backend\\vendorProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/vendorProfileController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
@@ -607,6 +612,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Requests\\ProfileUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProfileUpdateRequest.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\Models\\Slider' => __DIR__ . '/../..' . '/app/Models/Slider.php',
+        'App\\Models\\SubCategory' => __DIR__ . '/../..' . '/app/Models/SubCategory.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -2294,6 +2300,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'Illuminate\\Foundation\\Bus\\PendingClosureDispatch' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Bus/PendingClosureDispatch.php',
         'Illuminate\\Foundation\\Bus\\PendingDispatch' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Bus/PendingDispatch.php',
         'Illuminate\\Foundation\\CacheBasedMaintenanceMode' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/CacheBasedMaintenanceMode.php',
+        'Illuminate\\Foundation\\Cloud' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Cloud.php',
         'Illuminate\\Foundation\\ComposerScripts' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/ComposerScripts.php',
         'Illuminate\\Foundation\\Concerns\\ResolvesDumpSource' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Concerns/ResolvesDumpSource.php',
         'Illuminate\\Foundation\\Console\\AboutCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/Console/AboutCommand.php',
@@ -4304,6 +4311,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'PHPUnit\\Metadata\\IgnoreDeprecations' => __DIR__ . '/..' . '/phpunit/phpunit/src/Metadata/IgnoreDeprecations.php',
         'PHPUnit\\Metadata\\IgnoreFunctionForCodeCoverage' => __DIR__ . '/..' . '/phpunit/phpunit/src/Metadata/IgnoreFunctionForCodeCoverage.php',
         'PHPUnit\\Metadata\\IgnoreMethodForCodeCoverage' => __DIR__ . '/..' . '/phpunit/phpunit/src/Metadata/IgnoreMethodForCodeCoverage.php',
+        'PHPUnit\\Metadata\\InvalidAttributeException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Metadata/Exception/InvalidAttributeException.php',
         'PHPUnit\\Metadata\\InvalidVersionRequirementException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Metadata/Exception/InvalidVersionRequirementException.php',
         'PHPUnit\\Metadata\\Metadata' => __DIR__ . '/..' . '/phpunit/phpunit/src/Metadata/Metadata.php',
         'PHPUnit\\Metadata\\MetadataCollection' => __DIR__ . '/..' . '/phpunit/phpunit/src/Metadata/MetadataCollection.php',
