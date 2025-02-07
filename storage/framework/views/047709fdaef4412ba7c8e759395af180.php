@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link rel="stylesheet" href="//cdn.datatables.net/2.2.1/css/dataTables.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.2.1/css/dataTables.bootstrap5.css">
-    <!-- Template CSS -->
+    <link rel="stylesheet" href="<?php echo e(asset('backend/assets/css/bootstrap-iconpicker.min.css')); ?>}">
+    <!-- Template CSS --> 
     <link rel="stylesheet" href="<?php echo e(asset('backend/assets/css/style.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('backend/assets/css/components.css')); ?>">
     <!-- Start GA -->
@@ -77,6 +78,7 @@
     <script src="<?php echo e(asset('backend/assets/modules/chocolat/dist/js/jquery.chocolat.min.js')); ?>"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="<?php echo e(asset('backend/assets/js/bootstrap-iconpicker.bundle.min.js')); ?>"></script>
 
     <!-- Page Specific JS File -->
     <script src="<?php echo e(asset('backend/assets/js/page/index-0.js')); ?>"></script>
