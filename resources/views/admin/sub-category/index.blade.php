@@ -36,21 +36,22 @@
         let id = $(this).data('id');
 
         $.ajax({
-          url: "{{route('admin.category.change-status')}}",
+          url: "{{ route('admin.sub-category.change-status') }}",
           method: 'PUT',
           data: {
             status: isChecked,
-            id: id
+            id: id,
+            _token: "{{ csrf_token() }}"
           },
           success: function(data){
-            toastr.success(data.message)
+            toastr.success(data.message);
           },
           error: function(xhr, status, error){
             console.log(error);
           }
-        })
-      })
-    })
+        });
+      });
+    });
   </script>
 
 @endpush
