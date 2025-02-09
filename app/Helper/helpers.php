@@ -1,4 +1,4 @@
-?<?php
+<?php
 
 /*Set sidebar item active*/if (!function_exists('setActive')) {
     /**
