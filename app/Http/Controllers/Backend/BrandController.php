@@ -78,16 +78,48 @@ class BrandController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $brand = Brand::findOrFail($id);
+        return view('admin.brand.edit', ['brand' => $brand]);
     }
 
     /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
+ * Update the specified resource in storage.
+ */
+public function update(Request $request, string $id)
+{
+    // Validate the request data
+    $request->validate([
+        'logo' => ['nullable', 'image', 'max:2000'], // Logo is optional, max size is 2MB
+        'name' => ['nullable', 'string', 'max:200'],
+        'is_featured' => ['required', 'boolean'],
+        'status' => ['required', 'boolean'],
+    ]);
+
+    // Find the brand by ID
+    $brand = Brand::findOrFail($id);
+
+    // Handle file upload if a new logo is provided
+    if ($request->hasFile('logo')) {
+        
+        // Upload the new logo
+        $logoPath = $this->updateImage($request, 'logo', 'uploads/brands');
+        $brand->logo = $logoPath;
     }
+
+    // Assign other fields
+    $brand->name = $request->name;
+    $brand->slug = Str::slug($request->name);
+    $brand->is_featured = $request->is_featured;
+    $brand->status = $request->status;
+
+    // Save the updated brand to the database
+    $brand->save();
+
+    // Show success message and redirect back
+    toastr('Brand updated successfully!');
+    return redirect()->route('admin.brand.index'); // Redirect to the brand listing page
+}
+
 
     /**
      * Remove the specified resource from storage.
