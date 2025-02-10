@@ -126,6 +126,29 @@ public function update(Request $request, string $id)
      */
     public function destroy(string $id)
     {
-        //
+        $brand = Brand::findOrFail($id);
+        
+        // Delete the associated banner image
+        $this->deleteImage($brand->logo);
+        
+        // Delete the slider record
+        $brand->delete();
+        
+        // Return a success response
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Delated successfully.'
+        ]);
+    }
+    public function changeStatus(Request $request)
+    {
+        $brand = Brand::findOrFail($request->id);
+        $brand->status = $request->status === 'true' ? 1 : 0;
+        $brand->save();
+    
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Status has been updated!',
+        ]);
     }
 }
