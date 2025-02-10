@@ -18,14 +18,15 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         '662a729f963d39afe703c9d9b7ab4a8c' => __DIR__ . '/..' . '/symfony/polyfill-php83/bootstrap.php',
         '0b47d6d4a00ca9112ba3953b49e7c9a4' => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src/helper.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
         'da91a01b5badbe5394c83814ef5982ea' => __DIR__ . '/..' . '/php-flasher/flasher/helpers.php',
+        '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '3bd81c9b8fcc150b69d8b63b4d2ccf23' => __DIR__ . '/..' . '/spatie/flare-client-php/src/helpers.php',
         '09f6b20656683369174dd6fa83b7e5fb' => __DIR__ . '/..' . '/symfony/polyfill-uuid/bootstrap.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '47e1160838b5e5a10346ac4084b58c23' => __DIR__ . '/..' . '/laravel/prompts/src/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '8c15924acd8bcdca7d143b74c5c435ae' => __DIR__ . '/..' . '/php-flasher/flasher-toastr/helpers.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
@@ -157,6 +158,8 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'F' => 
         array (
             'Fruitcake\\Cors\\' => 15,
+            'Flasher\\Toastr\\Prime\\' => 21,
+            'Flasher\\Toastr\\Laravel\\' => 23,
             'Flasher\\Prime\\' => 14,
             'Flasher\\Laravel\\' => 16,
             'Faker\\' => 6,
@@ -202,9 +205,9 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         ),
         'Yajra\\DataTables\\' => 
         array (
-            0 => __DIR__ . '/..' . '/yajra/laravel-datatables-buttons/src',
+            0 => __DIR__ . '/..' . '/yajra/laravel-datatables-fractal/src',
             1 => __DIR__ . '/..' . '/yajra/laravel-datatables-editor/src',
-            2 => __DIR__ . '/..' . '/yajra/laravel-datatables-fractal/src',
+            2 => __DIR__ . '/..' . '/yajra/laravel-datatables-buttons/src',
             3 => __DIR__ . '/..' . '/yajra/laravel-datatables-html/src',
             4 => __DIR__ . '/..' . '/yajra/laravel-datatables-oracle/src',
         ),
@@ -338,13 +341,13 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         ),
         'Spatie\\LaravelIgnition\\' => 
         array (
-            0 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/laravel-ignition',
-            1 => __DIR__ . '/..' . '/spatie/laravel-ignition/src',
+            0 => __DIR__ . '/..' . '/spatie/laravel-ignition/src',
+            1 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/laravel-ignition',
         ),
         'Spatie\\Ignition\\' => 
         array (
-            0 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/ignition',
-            1 => __DIR__ . '/..' . '/spatie/ignition/src',
+            0 => __DIR__ . '/..' . '/spatie/ignition/src',
+            1 => __DIR__ . '/..' . '/spatie/error-solutions/legacy/ignition',
         ),
         'Spatie\\FlareClient\\' => 
         array (
@@ -501,6 +504,14 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         array (
             0 => __DIR__ . '/..' . '/fruitcake/php-cors/src',
         ),
+        'Flasher\\Toastr\\Prime\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-flasher/flasher-toastr',
+        ),
+        'Flasher\\Toastr\\Laravel\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-flasher/flasher-toastr-laravel',
+        ),
         'Flasher\\Prime\\' => 
         array (
             0 => __DIR__ . '/..' . '/php-flasher/flasher',
@@ -572,6 +583,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
 
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\DataTables\\BrandDataTable' => __DIR__ . '/../..' . '/app/DataTables/BrandDataTable.php',
         'App\\DataTables\\CategoryDataTable' => __DIR__ . '/../..' . '/app/DataTables/CategoryDataTable.php',
         'App\\DataTables\\SliderDataTable' => __DIR__ . '/../..' . '/app/DataTables/SliderDataTable.php',
         'App\\DataTables\\SubCategoryDataTable' => __DIR__ . '/../..' . '/app/DataTables/SubCategoryDataTable.php',
@@ -586,6 +598,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Controllers\\Auth\\RegisteredUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisteredUserController.php',
         'App\\Http\\Controllers\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerifyEmailController.php',
         'App\\Http\\Controllers\\Backend\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/AdminController.php',
+        'App\\Http\\Controllers\\Backend\\BrandController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/BrandController.php',
         'App\\Http\\Controllers\\Backend\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/CategoryController.php',
         'App\\Http\\Controllers\\Backend\\ProfileController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/ProfileController.php',
         'App\\Http\\Controllers\\Backend\\SliderController' => __DIR__ . '/../..' . '/app/Http/Controllers/Backend/SliderController.php',
@@ -610,6 +623,7 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
         'App\\Http\\Requests\\ProfileUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProfileUpdateRequest.php',
+        'App\\Models\\Brand' => __DIR__ . '/../..' . '/app/Models/Brand.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\Models\\Slider' => __DIR__ . '/../..' . '/app/Models/Slider.php',
         'App\\Models\\SubCategory' => __DIR__ . '/../..' . '/app/Models/SubCategory.php',
@@ -1560,6 +1574,11 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'Flasher\\Prime\\Translation\\Messages' => __DIR__ . '/..' . '/php-flasher/flasher/Translation/Messages.php',
         'Flasher\\Prime\\Translation\\ResourceInterface' => __DIR__ . '/..' . '/php-flasher/flasher/Translation/ResourceInterface.php',
         'Flasher\\Prime\\Translation\\TranslatorInterface' => __DIR__ . '/..' . '/php-flasher/flasher/Translation/TranslatorInterface.php',
+        'Flasher\\Toastr\\Laravel\\Facade\\Toastr' => __DIR__ . '/..' . '/php-flasher/flasher-toastr-laravel/Facade/Toastr.php',
+        'Flasher\\Toastr\\Laravel\\FlasherToastrServiceProvider' => __DIR__ . '/..' . '/php-flasher/flasher-toastr-laravel/FlasherToastrServiceProvider.php',
+        'Flasher\\Toastr\\Prime\\ToastrBuilder' => __DIR__ . '/..' . '/php-flasher/flasher-toastr/ToastrBuilder.php',
+        'Flasher\\Toastr\\Prime\\ToastrFactory' => __DIR__ . '/..' . '/php-flasher/flasher-toastr/ToastrFactory.php',
+        'Flasher\\Toastr\\Prime\\ToastrPlugin' => __DIR__ . '/..' . '/php-flasher/flasher-toastr/ToastrPlugin.php',
         'Fruitcake\\Cors\\CorsService' => __DIR__ . '/..' . '/fruitcake/php-cors/src/CorsService.php',
         'Fruitcake\\Cors\\Exceptions\\InvalidOptionException' => __DIR__ . '/..' . '/fruitcake/php-cors/src/Exceptions/InvalidOptionException.php',
         'GrahamCampbell\\ResultType\\Error' => __DIR__ . '/..' . '/graham-campbell/result-type/src/Error.php',
@@ -4311,7 +4330,6 @@ class ComposerStaticInit9c491b8531eec05ba41a11d9276a5749
         'PHPUnit\\Metadata\\IgnoreDeprecations' => __DIR__ . '/..' . '/phpunit/phpunit/src/Metadata/IgnoreDeprecations.php',
         'PHPUnit\\Metadata\\IgnoreFunctionForCodeCoverage' => __DIR__ . '/..' . '/phpunit/phpunit/src/Metadata/IgnoreFunctionForCodeCoverage.php',
         'PHPUnit\\Metadata\\IgnoreMethodForCodeCoverage' => __DIR__ . '/..' . '/phpunit/phpunit/src/Metadata/IgnoreMethodForCodeCoverage.php',
-        'PHPUnit\\Metadata\\InvalidAttributeException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Metadata/Exception/InvalidAttributeException.php',
         'PHPUnit\\Metadata\\InvalidVersionRequirementException' => __DIR__ . '/..' . '/phpunit/phpunit/src/Metadata/Exception/InvalidVersionRequirementException.php',
         'PHPUnit\\Metadata\\Metadata' => __DIR__ . '/..' . '/phpunit/phpunit/src/Metadata/Metadata.php',
         'PHPUnit\\Metadata\\MetadataCollection' => __DIR__ . '/..' . '/phpunit/phpunit/src/Metadata/MetadataCollection.php',

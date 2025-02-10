@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\DataTables\BrandDataTable;
 use App\Http\Controllers\Controller;
-use App\Models\Brand; // Ensure the Brand model is imported
+use App\Models\Brand; 
 use App\Traits\ImageUploadTrait;
 use Illuminate\Http\Request;
 use Str;
@@ -53,7 +53,7 @@ class BrandController extends Controller
 
         // Assign other fields
         $brand->name = $request->name;
-        $brand->slug =Str::slug( $request->title);
+        $brand->slug =Str::slug( $request->name);
         $brand->is_featured = $request->is_featured;
         $brand->status = $request->status;
 
@@ -61,8 +61,8 @@ class BrandController extends Controller
         $brand->save();
 
         // Show success message and redirect back
-        toastr()->success('Brand created successfully!');
-        return redirect()->back(); // Updated to redirect to the brand listing page
+        toastr('Brand created successfully!');
+        return redirect()->route('admin.brand.index'); // Updated to redirect to the brand listing page
     }
 
     /**

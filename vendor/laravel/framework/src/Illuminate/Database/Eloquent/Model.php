@@ -1110,7 +1110,7 @@ abstract class Model implements Arrayable, ArrayAccess, CanBeEscapedWhenCastToSt
      * @param  array  $options
      * @return bool
      */
-    public function save(array $options = []): bool
+    public function save(array $options = [])
     {
         $this->mergeAttributesFromCachedCasts();
 

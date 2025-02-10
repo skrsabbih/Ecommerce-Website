@@ -22,7 +22,37 @@ class BrandDataTable extends DataTable
     public function dataTable(QueryBuilder $query): EloquentDataTable
     {
         return (new EloquentDataTable($query))
-            ->addColumn('action', 'brand.action')
+        ->addColumn('action', function($query){
+            $editBtn = "<a href='".route('admin.brand.edit', $query->id)."' class='btn btn-primary'><i class='far fa-edit'></i></a>";
+            $deleteBtn = "<a href='".route('admin.brand.destroy', $query->id)."' class='btn btn-danger delete-item'><i class='fas fa-trash'></i></a>";
+            
+
+            return "<div style='display: flex; gap: 5px;'>" . $editBtn . $deleteBtn . "</div>";
+        })
+            ->addColumn('logo', function($query) {
+                return $img = "<img width='200 px' src=".asset($query->logo)." ></img>"; 
+            })
+            ->addColumn('status', function($query){
+                if($query->status == 1){
+                    $button = '<label class="custom-switch mt-2">
+                          <input type="checkbox" checked name="custom-switch-checkbox" data-id="'.$query->id.'" class="custom-switch-input change-status">
+                          <span class="custom-switch-indicator"></span>
+                        </label>';
+                }else{
+                    $button = '<label class="custom-switch mt-2">
+                          <input type="checkbox" name="custom-switch-checkbox" data-id="'.$query->id.'" class="custom-switch-input change-status">
+                          <span class="custom-switch-indicator"></span>
+                        </label>';
+                }
+                
+                return $button;
+            }) ->addColumn('is_featured', function ($query) {
+                return $query->status == 1 
+                    ? '<i class="badge badge-success">Active</i>' 
+                    : '<i class="badge badge-danger">Inactive</i>';
+            })
+            ->rawColumns(['logo','action','is_featured','status'])
+
             ->setRowId('id');
     }
 
@@ -62,15 +92,16 @@ class BrandDataTable extends DataTable
     public function getColumns(): array
     {
         return [
+            Column::make('id')->width(50),
+            Column::make('logo')->width(250),
+            Column::make('name')->width(250),
+            Column::make('is_featured')->width(250),
+            Column::make('status')->width(150),
             Column::computed('action')
-                  ->exportable(false)
-                  ->printable(false)
-                  ->width(60)
-                  ->addClass('text-center'),
-            Column::make('id'),
-            Column::make('add your columns'),
-            Column::make('created_at'),
-            Column::make('updated_at'),
+            ->exportable(false)
+            ->printable(false)
+            ->width(200)
+            ->addClass('text-center'),
         ];
     }
 

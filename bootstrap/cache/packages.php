@@ -59,6 +59,17 @@
       0 => 'Flasher\\Laravel\\FlasherServiceProvider',
     ),
   ),
+  'php-flasher/flasher-toastr-laravel' => 
+  array (
+    'aliases' => 
+    array (
+      'Toastr' => 'Flasher\\Toastr\\Laravel\\Facade\\Toastr',
+    ),
+    'providers' => 
+    array (
+      0 => 'Flasher\\Toastr\\Laravel\\FlasherToastrServiceProvider',
+    ),
+  ),
   'spatie/laravel-ignition' => 
   array (
     'aliases' => 
