@@ -90,13 +90,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Offer Start Date</label>
-                                    <input type="text" class="form-control datepicker" name="offer_start_date" value="{{old('offer_start_date')}}">
+                                    <input type="date" class="form-control datepicker" name="offer_start_date" value="{{old('offer_start_date')}}">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label>Offer End Date</label>
-                                    <input type="text" class="form-control datepicker" name="offer_end_date" value="{{old('offer_end_date')}}">
+                                    <input type="date" class="form-control datepicker" name="offer_end_date" value="{{old('offer_end_date')}}">
                                 </div>
                             </div>
                         </div>
