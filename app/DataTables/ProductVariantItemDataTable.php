@@ -25,7 +25,7 @@ class ProductVariantItemDataTable extends DataTable
             ->addColumn('action', function($query){
 
                 $editBtn = "<a href='".route('admin.products-variant-item.edit', $query->id)."' class='btn btn-primary'><i class='far fa-edit'></i></a>";
-                $deleteBtn = "<a href='".route('admin.products-variant-item.destroy', $query->id)."' class='btn btn-danger ml-2 delete-item'><i class='far fa-trash-alt'></i></a>";
+                $deleteBtn = "<a href='".route('admin.products-variant-item.destroy', $query->id)."' class='btn btn-danger ml-2 delete-item'><i class='fas fa-trash'></i></a>";
 
                 return $editBtn.$deleteBtn;
             })

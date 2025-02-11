@@ -94,6 +94,7 @@ class ProductVariantController extends Controller
     public function destroy(string $id)
     {
         $varinat = ProductVariant::findOrFail($id);
+        
        
         $varinat->delete();
 
