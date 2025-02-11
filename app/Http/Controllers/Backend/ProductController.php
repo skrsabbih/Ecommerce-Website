@@ -220,9 +220,9 @@ class ProductController extends Controller
 
     public function getChildCategories(Request $request)
     {
-        //$childCategories = ChildCategory::where('sub_category_id', $request->id)->get();
+        $childCategories = ChildCategory::where('sub_category_id', $request->id)->get();
 
-        //return $childCategories;
+        return $childCategories;
     }
 
 }
