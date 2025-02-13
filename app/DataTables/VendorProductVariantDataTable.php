@@ -27,7 +27,7 @@ class VendorProductVariantDataTable extends DataTable
             $veriantItems = "<a href='".route('vendor.products-variant-item.index', ['productId' => request()->product, 'variantId' => $query->id])."' class='btn btn-info btn-space-right'><i class='far fa-edit'></i> Variant Items</a>";
 
             $editBtn = "<a href='".route('vendor.products-variant.edit', $query->id)."' class='btn btn-primary'><i class='far fa-edit'></i></a>";
-            $deleteBtn = "<a href='".route('vendor.products-variant.destroy', $query->id)."' class='btn btn-danger ml-2 delete-item'><i class='far fa-trash-alt'></i></a>";
+            $deleteBtn = "<a href='".route('vendor.products-variant.destroy', $query->id)."' class='btn btn-danger ml-2 delete-item'><i class='fas fa-trash'></i></a>";
 
             return $veriantItems.$editBtn.$deleteBtn;
         })
