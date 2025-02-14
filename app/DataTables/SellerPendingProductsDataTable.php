@@ -2,6 +2,7 @@
 
 namespace App\DataTables;
 
+
 use App\Models\Product;
 use App\Models\SellerPendingProduct;
 use Illuminate\Database\Eloquent\Builder as QueryBuilder;
