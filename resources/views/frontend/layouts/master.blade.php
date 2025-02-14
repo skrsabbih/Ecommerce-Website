@@ -146,8 +146,6 @@
 
 <!--main/custom js-->
 <script src="{{asset('frontend/js/main.js')}}"></script>
-
-</body>
 <script>
     @if ($errors->any())
         @foreach ($errors->all() as $error)
@@ -155,4 +153,7 @@
         @endforeach
     @endif
 </script>
+@stack('scripts')
+</body>
+
 </html>

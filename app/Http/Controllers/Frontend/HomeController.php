@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\FlashSale;
+use App\Models\FlashSaleItem;
 use Illuminate\Http\Request;
 use App\Models\Slider;
 use App\Models\Product;
@@ -14,13 +16,20 @@ class HomeController extends Controller
         
         $sliders=Slider::where('status',1)->orderBy('serial','asc')->get();
         $brands = Brand::where('status', 1)->where('is_featured', 1)->get();
+       
+        $flashSaleDate = FlashSale::first();
+
+        $flashSaleItems = FlashSaleItem::where('show_at_home', 1)->where('status', 1)->pluck('product_id')->toArray();
+
         $typeBaseProducts = $this->getTypeBaseProduct();
 
 
         return view('frontend.home.home',
         compact(
             'sliders',
-           'brands',
+            'flashSaleDate',
+            'flashSaleItems',
+            'brands',
             'typeBaseProducts'
         )
     );
