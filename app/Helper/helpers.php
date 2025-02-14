@@ -38,4 +38,37 @@ function checkDiscount($product) {
     return false;
 }
 
+/** Calculate discount percent */
+
+function calculateDiscountPercent($originalPrice, $discountPrice) {
+    $discountAmount = $originalPrice - $discountPrice;
+    $discountPercent = ($discountAmount / $originalPrice) * 100;
+
+    return round($discountPercent);
+}
+
+/** Check the product type */
+
+function productType($type)
+{
+    switch ($type) {
+        case 'new_arrival':
+            return 'New';
+            break;
+        case 'featured_product':
+            return 'Featured';
+            break;
+        case 'top_product':
+            return 'Top';
+            break;
+
+        case 'best_product':
+            return 'Best';
+            break;
+
+        default:
+            return '';
+            break;
+    }
+}
 
