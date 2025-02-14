@@ -21,12 +21,12 @@ class Product extends Model
 
     public function productImageGalleries()
     {
-       
+        return $this->hasMany(ProductImageGallery::class);
     }
 
     public function variants()
     {
-      
+        return $this->hasMany(ProductVariant::class);
     }
 
     public function brand()
@@ -36,6 +36,6 @@ class Product extends Model
 
     public function reviews()
     {
-        
+       // return $this->hasMany(ProductReview::class);
     }
 }

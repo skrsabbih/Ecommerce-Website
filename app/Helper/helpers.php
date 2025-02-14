@@ -26,4 +26,16 @@
         return '';
     }
 }
+/** Check if product have discount */
+
+function checkDiscount($product) {
+    $currentDate = date('Y-m-d');
+
+    if($product->offer_price > 0 && $currentDate >= $product->offer_start_date && $currentDate <= $product->offer_end_date) {
+        return true;
+    }
+
+    return false;
+}
+
 
