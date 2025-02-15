@@ -73,11 +73,11 @@
                             <p class="wsus__stock_area"><span class="in_stock">stock out</span> ({{$product->qty}} item)</p>
                             @endif
                             @if (checkDiscount($product))
-                                <h4>{{$settings->currency_icon}}{{$product->offer_price}} <del>{{$settings->currency_icon}}{{$product->price}}</del></h4>
+                                {{-- <h4>{{$settings->currency_icon}}{{$product->offer_price}} <del>{{$settings->currency_icon}}{{$product->price}}</del></h4> --}}
                             @else
-                                <h4>{{$settings->currency_icon}}{{$product->price}}</h4>
+                                {{-- <h4>{{$settings->currency_icon}}{{$product->price}}</h4> --}}
                             @endif
-                            <p class="wsus__pro_rating">
+                            {{-- <p class="wsus__pro_rating">
                                 @php
                                 $avgRating = $product->reviews()->avg('rating');
                                 $fullRating = round($avgRating);
@@ -92,7 +92,7 @@
                                 @endfor
 
                                 <span>({{count($product->reviews)}} review)</span>
-                            </p>
+                            </p> --}}
                            <p class="description">{!! $product->short_description !!}</p>
 
                             <form class="shopping-cart-form">
@@ -201,7 +201,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-xl-6 col-xxl-7 col-md-6 mt-4 mt-md-0">
-                                                <div class="wsus__pro_det_vendor_text">
+                                                {{-- <div class="wsus__pro_det_vendor_text">
                                                     <h4>{{$product->vendor->user->name}}</h4>
                                                     <p class="rating">
                                                         @php
@@ -224,7 +224,7 @@
                                                     <p><span>Phone:</span> {{$product->vendor->phone}}</p>
                                                     <p><span>mail:</span> {{$product->vendor->email}}</p>
                                                     <a href="vendor_details.html" class="see_btn">visit store</a>
-                                                </div>
+                                                </div> --}}
                                             </div>
                                             <div class="col-xl-12">
                                                 <div class="wsus__vendor_details">
@@ -234,7 +234,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade" id="pills-contact2" role="tabpanel"
+                                {{-- <div class="tab-pane fade" id="pills-contact2" role="tabpanel"
                                     aria-labelledby="pills-contact-tab2">
                                     <div class="wsus__pro_det_review">
                                         <div class="wsus__pro_det_review_single">
@@ -343,7 +343,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
 
                             </div>
                         </div>
@@ -385,7 +385,7 @@
 @endsection
 
 @push('scripts')
-    <script>
+    {{-- <script>
         $(document).ready(function(){
             $('.message_modal').on('submit', function(e) {
                 e.preventDefault();
@@ -420,6 +420,6 @@
                 })
             })
         })
-    </script>
+    </script> --}}
 @endpush
 
