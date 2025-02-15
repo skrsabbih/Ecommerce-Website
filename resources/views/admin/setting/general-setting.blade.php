@@ -34,13 +34,13 @@
             <hr>
             <div class="form-group">
                 <label>Default Currecy Name</label>
-                {{-- <select name="currency_name" id="" class="form-control select2">
+                <select name="currency_name" id="" class="form-control select2">
                     <option value="">Select</option>
                     @foreach (config('settings.currecy_list') as $currency)
                         <option {{@$generalSettings->currency_name == $currency ? 'selected' : ''}} value="{{$currency}}">{{$currency}}</option>
                     @endforeach
 
-                </select> --}}
+                </select>
             </div>
             <div class="form-group">
                 <label>Currency Icon</label>
@@ -50,9 +50,9 @@
                 <label>Timezone</label>
                 <select name="time_zone" id="" class="form-control select2">
                     <option value="">Select</option>
-                    {{-- @foreach (config('settings.time_zone') as $key => $timeZone)
+                    @foreach (config('settings.time_zone') as $key => $timeZone)
                         <option {{@$generalSettings->time_zone == $key ? 'selected' : ''}} value="{{$key}}">{{$key}}</option>
-                    @endforeach --}}
+                    @endforeach
                 </select>
             </div>
             <button type="submit" class="btn btn-primary">Update</button>
