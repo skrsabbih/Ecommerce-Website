@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 
 @section('title')
-{{$settings->site_name}} || Flash Sale
+{{-- {{$settings->site_name}} || Flash Sale --}}
 @endsection
 
 @section('content')
@@ -51,11 +51,12 @@
                 </div>
 
                 <div class="row">
-                    @php
-                        $products = \App\Models\Product::withAvg('reviews', 'rating')->withCount('reviews')
-                    ->with(['variants', 'category', 'productImageGalleries'])
-                        ->whereIn('id', $flashSaleItems)->get();
-                    @endphp
+                   
+            @php
+            $products = \App\Models\Product::with(['variants', 'category', 'productImageGalleries'])
+                ->whereIn('id', $flashSaleItems)
+                ->get();
+        @endphp
                     @foreach ($products as $product)
                         <x-product-card :product="$product" />
                     @endforeach

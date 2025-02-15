@@ -19,7 +19,7 @@
             <li><a href="" class="add_to_wishlist" data-id="{{$product->id}}"><i class="far fa-heart"></i></a></li>
             {{-- <li><a href="#"><i class="far fa-random"></i></a> --}}
         </ul>
-        {{-- <div class="wsus__product_details">
+        <div class="wsus__product_details">
             <a class="wsus__category" href="#">{{$product->category->name}} </a>
 
             <p class="wsus__pro_rating">
@@ -57,6 +57,6 @@
                 <input class="" name="qty" type="hidden" min="1" max="100" value="1" />
                 <button class="add_cart" type="submit">add to cart</button>
             </form>
-        </div> --}}
+        </div>
     </div>
 </div>
