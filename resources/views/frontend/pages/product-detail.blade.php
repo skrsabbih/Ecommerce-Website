@@ -75,8 +75,7 @@
                             @if (checkDiscount($product))
                                 <h4>{{$settings->currency_icon}}{{$product->offer_price}} <del>{{$settings->currency_icon}}{{$product->price}}</del></h4>
                             @else
-                                <h4>{{$settings->currency_icon}}{{$product->price}}</h4>
-                            @endif
+                             @endif
                             {{-- <p class="wsus__pro_rating">
                                 @php
                                 $avgRating = $product->reviews()->avg('rating');
