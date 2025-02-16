@@ -49,8 +49,7 @@
             </div>
             <footer class="main-footer">
                 <div class="footer-left">
-                    Copyright &copy; 2025 <div class="bullet"></div> Design By <a href="">PHP-Pulse Team
-                        Nauval Azhar</a>
+                    Copyright &copy; 2025 <div class="bullet"></div> Design By <a href="">PHP-Pulse</a>
                 </div>
                 <div class="footer-right">
                 </div>
