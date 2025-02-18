@@ -20,7 +20,9 @@
             {{-- <li><a href="#"><i class="far fa-random"></i></a> --}}
         </ul>
         <div class="wsus__product_details">
-            <a class="wsus__category" href="#">{{$product->category->name}} </a>
+            <a class="wsus__category" href="#">
+                {{ $product->category?->name ?? 'No Category' }}
+            </a>
 
             <p class="wsus__pro_rating">
 

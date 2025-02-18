@@ -43,10 +43,10 @@ class ChildCategoryDataTable extends DataTable
                 return $button;
             })
             ->addColumn('category', function($query){
-                return $query->category->name;
+                return optional($query->category)->name;
             })
             ->addColumn('sub_category', function($query){
-                return $query->subCategory->name;
+                return optional($query->subCategory)->name;
             })
             ->rawColumns(['status', 'action'])
             ->setRowId('id');

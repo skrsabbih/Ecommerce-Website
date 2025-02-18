@@ -28,7 +28,7 @@ class SubCategoryDataTable extends DataTable
                 return "<div style='display: flex; gap: 5px;'>" . $editBtn . $deleteBtn . "</div>";
             })
             ->addColumn('category', function($query) {
-                return $query->category->name;
+                return optional($query->category)->name;
             })
             ->addColumn('status', function($query) {
                 return $query->status == 1

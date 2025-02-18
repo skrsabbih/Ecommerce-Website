@@ -121,15 +121,15 @@ class ChildCategoryController extends Controller
         if(Product::where('child_category_id', $childCategory->id)->count() > 0){
             return response(['status' => 'error', 'message' => 'This item contain relation can\'t delete it.']);
         }
-        $homeSettings = HomePageSetting::all();
+        // $homeSettings = HomePageSetting::all();
 
-        foreach($homeSettings as $item){
-            $array = json_decode($item->value, true);
-            $collection = collect($array);
-            if($collection->contains('child_category', $childCategory->id)){
-                return response(['status' => 'error', 'message' => 'This item contain relation can\'t delete it.']);
-            }
-        }
+        // foreach($homeSettings as $item){
+        //     $array = json_decode($item->value, true);
+        //     $collection = collect($array);
+        //     if($collection->contains('child_category', $childCategory->id)){
+        //         return response(['status' => 'error', 'message' => 'This item contain relation can\'t delete it.']);
+        //     }
+        // }
 
         $childCategory->delete();
 
